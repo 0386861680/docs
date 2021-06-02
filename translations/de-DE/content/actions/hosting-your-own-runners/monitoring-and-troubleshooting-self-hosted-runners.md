@@ -8,12 +8,17 @@ redirect_from:
 versions:
   free-pro-team: '*'
   enterprise-server: '>=2.22'
+  github-ae: '*'
+type: tutorial
+defaultPlatform: linux
 ---
 
+{% data reusables.actions.ae-self-hosted-runners-notice %}
 {% data reusables.actions.enterprise-beta %}
 {% data reusables.actions.enterprise-github-hosted-runners %}
+{% data reusables.actions.ae-beta %}
 
-### Den Status eines selbst-gehosteten Runners mittels {% data variables.product.prodname_dotcom %} überprüfen
+### Den Status eines selbst-gehosteten Runners mittels {{ site.data.variables.product.prodname_dotcom }} überprüfen
 
 {% data reusables.github-actions.self-hosted-runner-management-permissions-required %}
 
