@@ -1,9 +1,4 @@
-const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const { EnvironmentPlugin } = require('webpack')
-
-module.exports = {
+module.exports ={
   entry: './javascripts/index.js',
   output: {
     filename: 'index.js',
