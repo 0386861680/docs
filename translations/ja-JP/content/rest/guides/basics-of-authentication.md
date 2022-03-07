@@ -6,10 +6,13 @@ redirect_from:
   - /v3/guides/basics-of-authentication
   - /rest/basics-of-authentication
 versions:
-  free-pro-team: '*'
-  enterprise-server: '*'
+  fpt: '*'
+  ghes: '*'
+  ghae: '*'
+  ghec: '*'
+topics:
+  - API
 ---
-
 
 
 このセクションでは、認証の基本に焦点を当てます。 具体的には、アプリケーションの[ウェブフロー][webflow]を実装した、([Sinatra][Sinatra] を使う) Rubyサーバーを、いくつかの方法で作成します。
@@ -20,15 +23,15 @@ versions:
 
 {% endtip %}
 
-### アプリケーションの登録
+## アプリケーションの登録
 
 まず、[アプリケーションの登録][new oauth app]が必要です。 登録された各 OAuth アプリケーションには、一意のクライアント ID とクライアントシークレットが割り当てられます。 クライアントシークレットは共有しないでください。 共有には、文字列をリポジトリにチェックインすることも含まれます。
 
-どのような情報を入力しても構いませんが、**認証コールバック URL** は例外です。 これが、アプリケーションの設定にあたってもっとも重要な情報と言えるでしょう。 認証の成功後に {% data variables.product.product_name %} がユーザに返すのは、コールバック URL なのです。
+どのような情報を入力しても構いませんが、**認証コールバック URL** は例外です。 これが、アプリケーションの設定にあたってもっとも重要な情報と言えるでしょう。 認証の成功後に {% data variables.product.product_name %} がユーザに返すのは、コールバックURLなのです。
 
 通常の Sinatra サーバーを実行しているので、ローカルインスタンスの場所は `http://localhost:4567` に設定されています。 コールバック URL を `http://localhost:4567/callback` と入力しましょう。
 
-### ユーザ認証の承認
+## ユーザ認証の承認
 
 {% data reusables.apps.deprecating_auth_with_query_parameters %}
 
@@ -47,7 +50,10 @@ get '/' do
 end
 ```
 
-クライアント ID とクライアントシークレットは、[アプリケーションの設定ページ][app settings]から取得されます。 これらの値は、{% data variables.product.product_name %} やその他あらゆる公開の場には、**決して_保存しないでください_**。 これらの値は、[環境変数][about env vars]として保存することをお勧めします。この例でも、そのようにしています。
+クライアント ID とクライアントシークレットは、[アプリケーションの設定ページ][app settings]から取得されます。
+{% ifversion fpt or ghec %} You should **never, _ever_** store these values in
+{% data variables.product.product_name %} や、それに限らず公開の場に保存しないでください。{% endif %}これらは
+[環境変数][about env vars]として保存することをお勧めします。この例でも、そのようにしています。
 
 次に、_views/index.erb_に以下の内容を貼り付けてください。
 
@@ -61,7 +67,7 @@ end
     </p>
     <p>
       We're going to now talk to the GitHub API. Ready?
-      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= client_id %>">Click here</a> to begin!</a>
+      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= client_id %>">Click here</a> to begin!
     </p>
     <p>
       If that link doesn't work, remember to provide your own <a href="/apps/building-oauth-apps/authorizing-oauth-apps/">Client ID</a>!
@@ -80,7 +86,7 @@ URLはアプリケーションに要求された[スコープ][oauth scopes]を`
 
 さて、コールバックURLを`callback`に指定したときのことを覚えていますか。 そのときルートを設定しなかったので、{% data variables.product.product_name %}はアプリケーションを認証した後、ユーザをどこにドロップするかがわからなかったのです。 では、この問題を解決しましょう。
 
-#### コールバックの設定
+### コールバックの設定
 
 _server.rb_にルートを追加して、コールバックが実行すべきことを指定します。
 
@@ -103,9 +109,9 @@ end
 
 アプリケーションの認証に成功すると、{% data variables.product.product_name %}は一時的な`code`値を提供します。 このコードを、`access_token`と引き換えに、`POST`で{% data variables.product.product_name %}に戻す必要があります。 GETおよびPOSTのHTTPリクエストをを簡素化するために、 [rest-client][REST Client]を使用しています。 REST経由でAPIにアクセスすることは、おそらくないということに留意してください。 もっと本格的なアプリケーションであれば、[お好みの言語で書かれたライブラリ][libraries]を使った方がいいでしょう。
 
-#### 付与されたスコープの確認
+### 付与されたスコープの確認
 
-将来的に、ユーザは[あなたがリクエストしたスコープを編集][edit scopes post]できるようになり、アプリケーションのアクセス権は、最初に要求したものより少なくなるかもしれません。 ですから、このトークンでリクエストを行う前に、ユーザからトークンに付与されたスコープを確認すべきです。
+URL を直接変更すれば、ユーザはリクエストしたスコープを編集できます。 こうすると、アプリケーションに対して元々リクエストしたよりも少ないアクセスだけを許可できます。 トークンでリクエストを行う前に、ユーザからトークンに付与されたスコープを確認してください。 詳しい情報については、「[OAuth App のスコープ](/developers/apps/scopes-for-oauth-apps#requested-scopes-and-granted-scopes)」を参照してください。
 
 付与されたスコープは、トークンの交換によるレスポンスの一部として返されます。
 
@@ -127,9 +133,9 @@ end
 
 リクエストを行う前にのみスコープを確認するだけでは不十分です。確認時と実際のリクエスト時の間に、ユーザがスコープを変更する可能性があります。 このような場合には、成功すると思っていたAPIの呼び出しが`404`または`401`ステータスになって失敗したり、情報の別のサブセットを返したりします。
 
-この状況にうまく対応できるように、有効なトークンによるリクエストに対するすべてのAPIレスポンスには、[`X-OAuth-Scopes`ヘッダ][oauth scopes]も含まれています。 このヘッダには、リクエストを行うために使用されたトークンのスコープのリストが含まれています。 それに加えて、OAuthアプリケーションAPIは、{% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@2.19" %}\[check a token for validity\]\[/v3/apps/oauth_applications/#check-a-token\]{% else %}\[check a token for validity\]\[/v3/apps/oauth_applications/#check-an-authorization\]{% endif %}にエンドポイントを提供します。 この情報を使用してトークンのスコープにおける変更を検出し、利用可能なアプリケーション機能の変更をユーザに通知します。
+この状況にうまく対応できるように、有効なトークンによるリクエストに対するすべてのAPIレスポンスには、[`X-OAuth-Scopes`ヘッダ][oauth scopes]も含まれています。 このヘッダには、リクエストを行うために使用されたトークンのスコープのリストが含まれています。 In addition to that, the OAuth Applications API provides an endpoint to {% ifversion fpt or ghes or ghec %} [check a token for validity](/rest/reference/apps#check-a-token){% else %}[check a token for validity](/rest/reference/apps#check-an-authorization){% endif %}. この情報を使用してトークンのスコープにおける変更を検出し、利用可能なアプリケーション機能の変更をユーザに通知します。
 
-#### 認証リクエストの実施
+### 認証リクエストの実施
 
 最後に、このアクセストークンで、ログインしたユーザとして認証のリクエストを行うことができます。
 
@@ -167,11 +173,13 @@ erb :basic, :locals => auth_result
 </p>
 ```
 
-### 「永続的な」認証の実装
+## 「永続的な」認証の実装
 
 ウェブページにアクセスするたびに、ユーザにアプリケーションへのログインを求めるというのは非常に悪いモデルです。 たとえば、`http://localhost:4567/basic`に直接移動してみてください。 エラーになるでしょう。
 
-「ここをクリック」というプロセスをすべてなくし、ユーザが{% data variables.product.product_name %}にログインしている限りそれを_記憶_して、このアプリケーションにアクセスできるとしたらどうでしょうか。 実のところ、_これからやろうとしていること_はまさにそういうことなのです。
+「ここをクリック」というプロセスをすべてなくし、ユーザが__
+{% data variables.product.product_name %} にログインしている限りそれを記憶して、このアプリケーションにアクセスできるとしたらどうでしょうか。 実のところ、
+_これからやろうとしていること_はまさにそういうことなのです。
 
 上記に上げたサーバはかなり単純なものです。 インテリジェントな認証を入れるために、トークンを保存するためセッションを使用するよう切り替えます。 これにより、認証はユーザーに意識されないものになります。
 
@@ -257,7 +265,7 @@ get '/callback' do
 end
 ```
 
-コードの大部分は見慣れたもののはずです。 たとえば、ここでも{% data variables.product.product_name %} APIを呼び出すために`RestClient.get`を使用し、 またERBテンプレート (この例では`advanced.erb`) に結果をレンダリングするため結果を渡しています。
+コードの大部分は見慣れたもののはずです。 For example, we're still using `RestClient.get` to call out to the {% ifversion fpt or ghec %}{% data variables.product.prodname_dotcom %}{% else %}{% data variables.product.product_name %}{% endif %} API, and we're still passing our results to be rendered in an ERB template (this time, it's called `advanced.erb`).
 
 また、ここでは`authenticated?`メソッドを使い、ユーザがすでに認証されているかを確認しています。 認証されていない場合は、`authenticate!`メソッドが呼び出され、OAuthのフローを実行して、付与されたトークンとスコープでセッションを更新します。
 
@@ -300,6 +308,5 @@ end
 [libraries]: /libraries/
 [oauth scopes]: /apps/building-oauth-apps/understanding-scopes-for-oauth-apps/
 [oauth scopes]: /apps/building-oauth-apps/understanding-scopes-for-oauth-apps/
-[edit scopes post]: https://developer.github.com/changes/2013-10-04-oauth-changes-coming/
 [new oauth app]: https://github.com/settings/applications/new
 [app settings]: https://github.com/settings/developers

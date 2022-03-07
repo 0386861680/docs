@@ -3,14 +3,17 @@ title: GitHub Marketplace 开发者协议
 redirect_from:
   - /articles/github-marketplace-developer-agreement
 versions:
-  free-pro-team: '*'
+  fpt: '*'
+topics:
+  - Policy
+  - Legal
 ---
 
 **参与 GITHUB 的 MARKETPLACE 计划必须遵守这些条款和条件（以下简称“协议”）。 注册参与 MARKETPLACE 计划或单击下面的“I ACCEPT（我接受）”，即表示您确认自己理解本协议，并接受其所有条款和条件。  如果您代表公司或其他法律实体签订本协议，则表示您拥有让该实体受本协议约束的法律权限，在这种情况下，“您”即表示您所代表的实体。**
 
-Effective Date: July 21, 2020
+生效日期：2021 年 8 月 24 日
 
-### 1.  定义
+## 1.   定义
 
 本协议中使用但未定义的大写术语，其含义应与位于 [https://docs.github.com/articles/github-terms-of-service](/articles/github-terms-of-service) 的“GitHub 服务条款”（以下简称“条款”或 “ToS”）中规定的含义相同 。
 
@@ -34,7 +37,7 @@ Effective Date: July 21, 2020
 
 “使用数据”是指就最终用户使用 GitHub Marketplace 和开发者产品的许可签发生成的 Marketplace 相关数据， 包括但不限于使用情况统计和销售数据汇总。 使用数据不包括并且特别排除银行信息和支付信息。
 
-### 2.  用途和许可授予
+## 2.   用途和许可授予
 
 **2.1** 本协议规定了开发者在 GitHub Marketplace 上发布产品推介以供最终用户购买其产品并用于 GitHub.com 时所应遵循的条款和条件。  本协议适用于免费分发和向最终用户收费的开发者产品。  开发者同意仅将 GitHub Marketplace 用于本协议允许或适用法律允许的用途。  在 GitHub 与开发者之间，开发者对开发者产品承担全部责任。
 
@@ -48,7 +51,7 @@ Effective Date: July 21, 2020
 
 **2.6** 开发者确认并同意，对于合理（GitHub 自行确定其合理性）声称开发者不具备对开发者产品的所有必要知识产权的任何第三方，GitHub 有权向其提供开发者的名称、地址和其他联系信息。
 
-### 3.  限制和责任
+## 3.   限制和责任
 
 不论上文第 2 节“用途和许可授予”中规定的任何要求， 开发者确认并同意，其使用 Marketplace 及参与本计划的明确前提是开发者遵守本协议，包括但不限于本节（第 3 节）中规定的限制和合规要求。
 
@@ -87,7 +90,7 @@ Effective Date: July 21, 2020
 
 **3.8** 本协议的任何规定均不得阻止任何一方开发和/或发布与另一方的应用程序相似或竞争的应用程序。
 
-### 4.  下架
+## 4.   下架
 
 **4.1** 您自行下架。 在下一个日历月第一日之前三十 (30) 天向 GitHub 发出书面通知后，您可以从 Marketplace 未来分发中删除您的产品推介，但必须遵守本协议关于 Marketplace 已分发产品的规定，包括但不限于退款要求。 从 Marketplace 未来分发中删除产品推介，不会：(a) 影响先前已购买或安装该产品的最终用户的许可权；或 (b) 改变您对于用户先前已购买或安装的产品提供交付或支持服务的义务。
 
@@ -126,7 +129,7 @@ GitHub 可能：阻止该产品推介在 Marketplace 上展示；从 Marketplace
 
 **4.4** 最终用户下架。 如果最终用户以违反条款的方式使用您的开发者产品，则我们有权暂停或终止该最终用户使用该开发者产品，并且对您不承担任何责任。
 
-### 5.  声明、保证和承诺
+## 5.   声明、保证和承诺
 
 **5.1** 开发者声明并保证，开发者已通知其开发者应用程序的所有用户：其帐户数据将在服务之外传输，开发者条款将管制此类帐户数据的隐私、安全或完整性。 开发者进一步声明并保证，在开发者应用程序存储、处理或传输帐户数据方面，没有适当的用户事先同意或适用法律的要求，开发者和开发者应用程序均不得：
 - (i) 以不利于帐户数据完整性的方式修改帐户数据的内容；
@@ -139,29 +142,29 @@ GitHub 可能：阻止该产品推介在 Marketplace 上展示；从 Marketplace
 
 **5.4** 免责声明。 MARKETPLACE 和 GITHUB API 的所有方面，包括所有服务器和网络组件，均“按原样”和“按可用”提供，在法律允许的最大范围内不提供任何形式的保证，并且 GITHUB 明确否认任何明示或暗示的保证，包括但不限于对适销性、所有权、适合特定用途和不侵权的任何暗示保证。  开发者确认，GITHUB 不保证 MARKETPLACE 或 GITHUB API 不中断、及时、安全、无错误或没有病毒、恶意软件或蠕虫（也称为专门设计为破坏、瘫痪或损害您的软件、硬件、计算机系统或网络的计算机代码或其他技术），并且开发者从 GITHUB、MARKETPLACE 或 GITHUB API 获取的任何信息或建议均不构成任何保证，除非在这些条款中有明确说明。  对于未经授权使用 MARKETPLACE 外部的任何开发者产品，GITHUB 概不负责，并且特别声明不承担任何义务。
 
-### 6.  定价和付款条款
+## 6.   定价和付款条款
 
 **6.1** GitHub 是最终用户通过 Marketplace 购买开发者产品的记录商。
 
-**6.2** 开发者应用程序在 Marketplace 清单上的价格应设置为美元 (USD)。 开发者对于每个上架产品的定价设置有完全控制权，但一旦设定，就无法更改。 您可以撤销现有上架产品的定价计划，然后为其添加新的定价计划，前提是新的定价计划对现有最终客户没有不利影响。 您为开发者产品设置的价格将决定您将收到的付款金额。 GitHub 将以美元汇出 75% 的销售价格，不扣除税款，但适用法律要求的任何预扣税款除外。 其余 25% 的销售价格将分配给 GitHub 并由 GitHub 保留。  每个月底，在达到最低值 500 美元后，GitHub 将汇出您的应得款项。
+**6.2** 开发者应用程序在 Marketplace 清单上的价格应设置为美元 (USD)。 开发者对于每个上架产品的定价设置有完全控制权，但一旦设定，就无法更改。 您可以撤销现有上架产品的定价计划，然后为其添加新的定价计划，前提是新的定价计划对现有最终客户没有不利影响。 您为开发者产品设置的价格将决定您将收到的付款金额。 GitHub 将以美元汇出 95% 的销售价格，不扣除税款，但适用法律要求的任何预扣税款除外。 其余 5% 的销售价格将分配给 GitHub 并由 GitHub 保留。  每个月底，在达到最低值 500 美元后，GitHub 将汇出您的应得款项。
 
 **6.3** 退款要求。 您将负责制定关于向最终客户退款的条款和条件。 在任何情况下，GitHub 都不负责为退款提供任何支持，GitHub 也没有义务支付任何退款。
 
 **6.4** 您支持自己的开发者产品。 您将自行负责支持和维护自己的开发者产品以及对其的任何投诉。 您的支持联系信息将显示在每个应用程序的详细信息页面中，以便用户请求客户支持。 对开发者产品的支持不足可能导致产品曝光率低，在某些情况下还会导致产品从 Marketplace 或 GitHub.com 上为用户存储先前已购或已下载开发者产品的任何其他地方被删除。
 
-### 7.  所有权
+## 7.   所有权
 
 除了本协议中明确提供的有限许可之外，本协议中的任何内容均不构成将某一方之品牌特征或其他技术中的知识产权转让给任何其他方，也不构成将某一方的任何知识产权转让给任何其他方。
 
-### 8.  责任限制
+## 8.   责任限制
 
 在任何情况下或基于任何法律理论（无论是合同、侵权、疏忽或其他方面），GITHUB 或其关联公司、高管、董事、员工、代理人或供应商对开发者或本协议下的任何第三方遭受的任何间接、附带性、特殊、示范性、后果性、惩罚性或其他类似损害不承担任何责任，包括利润损失、销售或业务损失、数据丢失、业务中断，或者开发者或任何其他第三方与本协议相关的任何其他损失，无论开发者是否被告知可能或可以预见到此类损害。无论本协议是否包含相反规定，GITHUB 对开发者或本协议所产生的任何第三方的总责任均不超过六 (6) 个月的费用。
 
-### 9.  保障赔偿
+## 9.   保障赔偿
 
 **9.1** 在适用法律允许的最大范围内，对于因 (a) 开发者使用 Marketplace 时违反本协议、条款或任何适用的法律法规；(b) 开发者的产品侵犯任何第三方的任何版权、商标、商业秘密、专利或其他知识产权；(c) 开发者数据或个人信息的任何丢失或泄露；以及 (d) 开发者的 EULA（或 ToS）所产生或与之相关的任何及所有索赔、诉讼、讼案或起诉，以及任何损失、责任、损害、费用和开支（包括合理的律师费），开发者同意为 GitHub、其关联公司及其各自的董事、高管、员工和代理人进行辩护、赔偿并确保他们免受损害。
 
-### 10. 终止
+## 10.  终止
 
 **10.1** 本协议持续有效，直到任一方如下所述终止协议。
 
@@ -173,37 +176,37 @@ GitHub 可能：阻止该产品推介在 Marketplace 上展示；从 Marketplace
 
 **10.5** 第 2、3、4、5、8、9 以及 第12-18 条规定的义务在本协议到期或终止后仍然有效。
 
-### 11. 修改
+## 11.  修改
 
 开发者承认并同意，GitHub 可能会不时修改本协议、Marketplace、GitHub API、一般 API 政策、GitHub 隐私政策、GitHub 开发者计划 ToS 和 GitHub.com ToS（"修改"）。 所有修改将通过 Marketplace、GitHub 网站 www.GitHub.com 或通过 GitHub 与开发者的直接沟通形式进行传达。 开发者进一步承认并同意，此类修改可随时实施，无需向开发者发出任何通知。 开发者应在任何修改首次通知之日起四十五 (45) 天内（或修改通知中指定的较短期限）（“符合期”）符合此类修改：在最新版本的开发者产品中实施和使用最新版本的 GitHub API，并对开发者产品进行任何可能需要的更改，以符合此类修改的要求。 开发者确认知悉，修改可能会对开发者产品产生不利影响，包括但不限于改变应用程序与 GitHub API 通信的方式。 对于此类修改或此类修改造成的任何不利影响，GitHub 对开发者或任何最终用户概不负责。 开发者在符合期后继续访问或使用 Marketplace 或 GitHub API 即表示接受对所发布的修改的约束。
 
-### 12. 转让；完整协议；修订
+## 12.  转让；完整协议；修订
 
 **12.1** 未经 GitHub 事先书面同意，开发者不得通过法律或其他方式直接或间接转让本协议的全部或部分或者开发者在本协议下享有的权利，或者委托履行开发者在本协议下承担的职责。  GitHub 无需开发者事先批准即可转让或转移本协议授予的权利。  此外，GitHub 无需开发者同意即可委托其在本协议下承担的责任或义务。
 
 **12.2** 本协议与“条款”一起构成双方就本协议标的所达成的全部协议。 GitHub 在任何时候未执行本协议的任何条款并不构成对该条款或本协议任何其他条款的放弃。
 
-### 13. 可分割性
+## 13.  可分割性
 
 如果本协议中的任何条款被具有管辖权的法院裁定为不可执行，该类条款应由法院修改并作出解释，以便在法律允许的最大范围内最好地实现原始条款，并且本协议的其余条款仍然有效。
 
-### 14. 缔约方关系
+## 14. 缔约方关系
 
 双方都是独立缔约方。 本协议不在双方之间建立合伙、特许经营、合资企业、代理、信托或雇佣关系。  开发者同意，GitHub 所属集团公司的每个成员都是本协议的第三方受益人，此类其他公司有权直接执行并依赖本协议中授予利益或授予有利于 GitHub 的权利的任何条款。  任何其他人员、公司或法律实体均不得成为本协议的第三方受益人。
 
-### 15. 通知
+## 15. 通知
 
-本协议下 GitHub 提供给开发者的所有通知均以书面形式递送 (i) 由国家认可的隔夜递送服务（“快递公司”）递送，或通过美国邮件寄到开发者提供给 GitHub 的联系人邮寄地址；或 (ii) 通过电子邮件发送到开发者提供的电子邮件地址。 mail to the contact mailing address provided by Developer to GitHub; or (ii) electronic mail to the electronic mail address provided by Developer. 开发者必须以书面形式通知 GitHub，通知可通过快递公司或美国邮件递送到以下地址：GitHub, Inc., Attn: Legal Department, 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107 USA。 Mail to the following address: GitHub, Inc., Attn: Legal Department, 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107 USA. 所有通知若是通过电子邮件发送，则视为在邮件发出后立即送达；若是以其他方式递送，则视为在签收时送达，如果更早，则视为在邮件投递或上面允许的快递公司揽收二 (2) 个工作日后送达。
+本协议下 GitHub 提供给开发者的所有通知均以书面形式递送 (i) 由国家认可的隔夜递送服务（“快递公司”）递送，或通过美国邮件寄到开发者提供给 GitHub 的联系人邮寄地址；或 (ii) 通过电子邮件发送到开发者提供的电子邮件地址。 邮件寄到开发者提供给 GitHub 的联系人邮寄地址；或 (ii) 通过电子邮件发送到开发者提供的电子邮件地址。 开发者必须以书面形式通知 GitHub，通知可通过快递公司或美国邮件递送到以下地址：GitHub, Inc., Attn: Legal Department, 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107 USA。 邮件递送到以下地址：GitHub, Inc., Attn: Legal Department, 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107 USA。 所有通知若是通过电子邮件发送，则视为在邮件发出后立即送达；若是以其他方式递送，则视为在签收时送达，如果更早，则视为在邮件投递或上面允许的快递公司揽收二 (2) 个工作日后送达。
 
-### 16. 管辖法律
+## 16. 管辖法律
 
 本协议受加利福尼亚州法律管辖，不考虑法律冲突原则。 开发者特此明确同意服从加利福尼亚州和旧金山县的联邦及州法院的专属个人管辖权，以解决与本协议相关的任何争议。  尽管有上述规定，GitHub 有权在任何司法管辖区寻求禁令补救或其他类型的紧急法律救济。
 
-### 17. 出口限制
+## 17. 出口限制
 
 通过 Marketplace 分销的开发者产品可能受美国或其他国家或地区的出口管制或限制。  开发者同意遵守所有适用的美国和国际出口法律法规。  这些法律可能包括对目的地、内容和/或最终用户的限制。
 
-### 18.  使用数据
+## 18.  使用数据
 为了运营和改善 Marketplace，GitHub 可能会从 Marketplace 和 GitHub API 或者 GitHub 为用户存储先前已购或已下载产品的任何地方收集使用数据。  使用数据将按照 GitHub 当时有效的隐私政策进行维护。  受限使用数据由 GitHub 单方面决定是否供开发者使用。
 
 # 附录1：数据保护附录
@@ -214,18 +217,18 @@ GitHub 可能：阻止该产品推介在 Marketplace 上展示；从 Marketplace
 
 **A1-2. 定义**
 
-- a. “Applicable Data Protection Laws” means any laws, regulations, regulatory frameworks, or other legislations relating to the processing and use of Personal Information, as applicable to the Agreement, including:
-   - The EU General Data Protection Regulation 2016/679 (“GDPR”), along with any implementing or corresponding equivalent national laws or regulations;
-   - 《2018 年加州消费者隐私法案》，加利福尼亚州 民事 法典第 1798.100 及其后各段 ("CCPA"); and
+- a. “适用数据保护法律”是指与处理及使用个人信息相关、适用于协议的法律、法规、监管框架或其他立法，包括：
+   - 《欧盟通用数据保护条例 2016/679》("GDPR")，以及任何实施中或相应的等效国家法律或法规；
+   - 《2018 年加州消费者隐私法案》，加利福尼亚州 民事 法典第 1798.100 及其后各段 ("CCPA")；以及
    - 《 2018 年英国数据保护法》及其中包含的 GDPR 实施条例。
-- b. “Personal Information” means any information which relates to an individual GitHub End User, customer or employee which could, alone or together with other information, personally identify him or her, whether supplied by GitHub for processing by the Developer or whether generated by the Developer in the course of performing its obligations under this Agreement.
+- b. “个人信息”是指与单个 GitHub 最终用户、客户或员工有关的任何信息，这些信息可以单独或结合其他信息来识别其身份，可能是 GitHub 提供给开发者进行处理的信息，也可能是开发者在履行其本协议义务的过程中生成的信息。
 - c. “处理”是指以手动或自动方式对 GitHub 保护数据执行的任何操作或一组操作，包括收集、记录、组织、存储、改编、更改、检索、查阅、使用、通过传输、传播或其他方式披露、阻止、删除或销毁。
 - d. “受保护数据”是指 GitHub 转移给开发者的有关 GitHub 最终用户的任何机密信息，包括个人信息、元数据、使用数据或与 GitHub 最终用户相关的其他数据或信息。
 
-**A1-3. Compliance with Data Transfer Laws**
+**A1-3. 遵守数据传输法**
 
-- a. GitHub 合规声明。 GitHub complies with Applicable Data Protection Laws. GitHub relies on Standard Contractual Clauses ("SCCs") for all transfers out of the European Union, European Economic Area, United Kingdom, and Switzerland to provide its services. 此外，GitHub 还通过了欧盟-美国 和瑞士-美国认证。 Privacy Shield Frameworks and the commitments they entail, although GitHub does not rely on the EU-U.S. Privacy Shield Framework as a legal basis for transfers of Personal Information in light of the judgment of the Court of Justice of the EU in Case C-311/18. GitHub 只出于数据收集时指定的有限目的向开发者转移个人信息。
-- b. 开发者合规声明。 Developer represents and warrants that it will (i) comply with Applicable Data Protection Laws; and (ii) abide by the requirements of European Economic Area and Swiss data protection law regarding the collection, use, transfer, retention, and other processing of Personal Information from the European Economic Area, United Kingdom, and Switzerland. All transfers of Personal Information to a third country or an international organization will be subject to appropriate safeguards as described in Article 46 of the GDPR and such transfers and safeguards will be documented according to Article 30(2) of the GDPR.
+- a. GitHub 合规声明。 GitHub 遵守适用的数据保护法。 GitHub 根据标准合同条款 ("SCCs") 为从欧盟、欧洲经济区、英国和瑞士的所有数据传出提供服务。 此外，GitHub 还通过了欧盟-美国 和瑞士-美国认证。 隐私盾框架及其包含的承诺，尽管 GitHub 并不依赖欧盟-美国 隐私盾框架作为个人信息转移的法律依据（根据欧盟法院在 C-311/18 案中的判决）。 GitHub 只出于数据收集时指定的有限目的向开发者转移个人信息。
+- b. 开发者合规声明。 开发者声明并保证，他们将 (i) 遵守适用的数据保护法；以及 (ii) 遵守欧洲经济区和瑞士数据保护法有关收集、使用、传输、保留和其他方式处理来自欧洲经济区、英国和瑞士的个人信息的要求。 所有向第三国或国际组织传输个人信息的行为都将受到 GDPR 第 46 条所述的适当保护措施的约束，并且此类传输和保护措施将根据 GDPR 第 30(2) 条的规定进行记录。
 
 **A1-4. 数据保护**
 
@@ -235,8 +238,8 @@ GitHub 可能：阻止该产品推介在 Marketplace 上展示；从 Marketplace
    - ii. 开发者处理和向第三方传递受保护的数据时，必须仅限于与最终用户之协议中所述的为最终用户提供服务的有限特定目的，除非最终用户同意其他用途。
 - c. 数据质量和相称性。 开发者必须保持受保护数据的准确性和最新性。
 - d. 安全. 开发者必须采取所有合理的安全措施，防范在处理受保护数据时面临的风险，例如意外或非法破坏、意外丢失、篡改、未经授权的披露或访问等风险。
-- e. 数据保留和删除。 除非法律禁止，否则开发者必须应 GitHub 的合理要求，退回或销毁存储在所有位置的不再需要用于收集时指定的有限目的的所有个人信息和相关数据。 开发者必须具备或制定信息销毁流程，以满足 GitHub 在协议第 3.8 节中提出的安全要求。
-- f. 再处理和向外传输。 开发者向子处理商传输受保护的数据时，应自行负责。 In the event that Developer must transfer the Protected Data to a third party, or Developer installs, uses, or enables third party services to process the Protected Data on Developer’s behalf, Developer must ensure that the third party will provide at least the same level of privacy protection as is required herein.
+- e. 数据保留和删除。 除非法律禁止，否则开发者必须应 GitHub 的合理要求，退回或销毁存储在所有位置的不再需要用于收集时指定的有限目的的所有个人信息和相关数据。
+- f. 再处理和向外传输。 开发者向子处理商传输受保护的数据时，应自行负责。 如果开发者必须将受保护的数据传输给第三方，或者开发者自行安装、使用或启用第三方服务来处理受保护的数据，则开发者必须确保该第三方采用至少满足本文要求的隐私保护级别。
 
 **A1-5. 受保护数据的使用**
 
@@ -246,9 +249,7 @@ GitHub 可能：阻止该产品推介在 Marketplace 上展示；从 Marketplace
 
 **A1-6. 合规**
 
-- a. 开发者必须按照以下方式遵守有关其隐私和数据使用实践的合理信息要求：
-   - i. 开发者将应要求提供其隐私声明、隐私政策、隐私通知或任何类似文档。 开发者还将提供任何相关合规报告的通知，包括隐私盾合规情况。
-   - ii. 开发者将遵守 GitHub Marketplace 开发者协议第 3.7 节中的信息安全和审核义务。
+开发者将应要求提供其隐私声明、隐私政策、隐私通知或任何类似文档。 开发者还将提供任何相关合规报告的通知，包括隐私盾合规情况。
 
 **A1-7. 终止**
 
