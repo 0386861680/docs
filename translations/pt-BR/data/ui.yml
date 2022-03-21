@@ -1,62 +1,86 @@
 ---
+meta:
+  default_description: Get started, troubleshoot, and make the most of GitHub. Documentation for new users, developers, administrators, and all of GitHub's products.
 header:
   github_docs: GitHub Docs
   contact: Contato
   notices:
-    ghe_release_candidate: GitHub Enterprise Server 2.22 is currently under limited release as a release candidate.
-    localization_complete: Publicamos atualizações frequentes em nossa documentação, e a tradução desta página ainda pode estar em andamento. Para obter as informações mais recentes, acesse a <a id="to-english-doc" href="/en">documentação em inglês</a>. Se houver problemas com a tradução desta página, <a href="https://github.com/contact?form[subject]=translation%20issue%20on%20help.github.com&form[comments]=">entre em contato conosco</a>.
+    ghae_silent_launch: O GitHub AE está atualmente sob versão limitada. <a href="https://enterprise.github.com/contact">Entre em contato com nossa Equipe de Vendas</a> para saber mais.
+    release_candidate: '# O nome da versão é interpretado antes do texto abaixo por meio de includes/header-notification.html'' está atualmente disponível como candidato da versão. Para obter mais informações, consulte "<a href="/admin/overview/about-upgrades-to-new-releases">Sobre atualizações para novas versões</a>."'''
+    localization_complete: Publicamos atualizações frequentes em nossa documentação, e a tradução desta página ainda pode estar em andamento. Para obter as informações mais recentes, acesse a <a id="to-english-doc" href="/en">documentação em inglês</a>. Se houver problemas com a tradução desta página, <a href="https://github.com/contact?form[subject]=translation%20issue%20on%20docs.github.com&form[comments]=">entre em contato conosco</a>.
     localization_in_progress: Olá! No momento, esta página ainda está sendo desenvolvida ou traduzida. Para obter as informações mais recentes, acesse a <a id="to-english-doc" href="/en">documentação em inglês</a>.
-    product_in_progress: '👋 Olá, explorador! Esta página está em desenvolvimento ativo. Para obter as informações mais atualizadas e precisas, visite nossa <a href="https://developer.github.com">documentação do desenvolvedor</a>.'
+    early_access: '📣 <b>Não compartilhe</b> esta URL publicamente. Esta página contém conteúdo sobre um recurso de acesso antecipado.'
+    release_notes_use_latest: Please use the latest release for the latest security, performance, and bug fixes.
+    #GHES release notes
+    ghes_release_notes_upgrade_patch_only: '📣 This is not the <a href="#{{ latestPatch }}">latest patch release</a> of Enterprise Server.'
+    ghes_release_notes_upgrade_release_only: '📣 This is not the <a href="/enterprise-server@{{ latestRelease }}/admin/release-notes">latest release</a> of Enterprise Server.'
+    ghes_release_notes_upgrade_patch_and_release: '📣 This is not the <a href="#{{ latestPatch }}">latest patch release</a> of this release series, and this is not the <a href="/enterprise-server@{{ latestRelease }}/admin/release-notes">latest release</a> of Enterprise Server.'
+  sign_up_cta: inscrever
+picker:
+  language_picker_default_text: Choose a language
+  product_picker_default_text: All products
+  version_picker_default_text: Choose a version
+release_notes:
+  banner_text: GitHub began rolling these changes out to enterprises on
 search:
   need_help: Precisa de ajuda?
   placeholder: Pesquisar tópicos, produtos...
+  loading: Carregando
+  no_results: Nenhum resultado encontrado
+  search_results_for: Search results for
+  no_content: No content
+  matches_displayed: Matches displayed
+  search_error: An error occurred trying to perform the search.
 homepage:
   explore_by_product: Explorar por produto
   version_picker: Versão
 toc:
   getting_started: Introdução
-  popular_articles: Artigos populares
+  popular: Popular
   guides: Guias
+  whats_new: O que há de novo
+  videos: Vídeos
+  all_changelogs: All changelog posts
 pages:
-  article_version: "Versão do artigo:"
+  article_version: 'Versão do artigo'
   miniToc: Neste artigo
+  contributor_callout: This article is contributed and maintained by
+  all_enterprise_releases: All Enterprise Server releases
+  about_versions: About versions
 errors:
   oops: Ops!
   something_went_wrong: Parece que algo deu errado.
   we_track_errors: Monitoramos esses erros automaticamente, mas não deixe entrar em contato conosco se o problema persistir.
   page_doesnt_exist: Parece que a página não existe.
 support:
-  still_need_help: Still need help?
+  still_need_help: Ainda precisa de ajuda?
   contact_support: Entrar em contato com o suporte
-  ask_community: Ask the GitHub community
-helpfulness:
-  able_to_find: Did this doc help you?
+  ask_community: Pergunte à comunidade do GitHub
+survey:
+  able_to_find: Esse documento ajudou você?
   yes: true
   no: false
-  yes_feedback: Want to learn about new docs features and updates? Sign up for updates!
-  email_placeholder: email@example.com
-  no_feedback: We're continually improving our docs. We'd love to hear how we can do better.
-  category_label: What problem did you have?
-  category_default: Choose an option
-  category_unclear: Information was unclear
-  category_confusing: The content was confusing
-  category_unhelpful: The article didn't answer my question
-  category_other: Other
-  comment_label: Let us know what we can do better
+  comment_yes_label: Let us know what we do well
+  comment_no_label: Conte-nos como podemos melhorar
   optional: Opcional
   required: Obrigatório
-  email_label: Can we contact you if we have more questions?
+  email_placeholder: email@example.com
+  email_label: If we can contact you with more questions, please enter your email address
+  email_validation: Please enter a valid email address
   send: Enviar
-  feedback: Obrigado. Seu feedback foi recebido.
+  feedback: Thank you! We received your feedback.
+  not_support: If you need a reply, please contact support instead.
+  privacy_policy: Política de Privacidade
 contribution_cta:
-  title: Help us make these docs great!
-  body: All GitHub docs are open source. See something that's wrong or unclear? Submit a pull request.
-  button: Make a contribution
+  title: Ajude-nos a tornar esses documentos ótimos!
+  body: Todos os documentos do GitHub são de código aberto. Você percebeu que algo que está errado ou não está claro? Envie um pull request.
+  button: Faça uma contribuição
   or: Ou,
-  to_guidelines: learn how to contribute.
+  to_guidelines: aprenda como contribuir.
 products:
   graphql:
     reference:
+      implements: Implements
       fields: Campos
       arguments: Argumentos
       name: Nome
@@ -71,8 +95,16 @@ products:
       deprecation_notice: Aviso de descontinuação
   rest:
     reference:
+      default: Padrão
+      name: Nome
+      in: In
+      type: Tipo
+      description: Descrição
+      notes: Observações
       parameters: Parâmetros
       response: Resposta
+      error_codes: Error Codes
+      http_status_code: HTTP Status Code
       code_sample: Amostra de código
       code_samples: Amostras de código
       preview_notice: Aviso de pré-visualização
@@ -80,6 +112,8 @@ products:
       see_preview_notice: Ver aviso de pré-visualização
       see_preview_notices: Ver avisos de pré-visualização
       preview_header_is_required: Este cabeçalho é <strong>obrigatório</strong>
+      preview_notice_to_change: This API is under preview and subject to change
+      works_with_github_apps: Works with GitHub Apps
 footer:
   all_rights_reserved: Todos os direitos reservados
   terms: Termos
@@ -118,3 +152,63 @@ footer:
       careers: Carreiras
       press: Imprensa
       shop: Loja
+product_landing:
+  quickstart: QuickStart
+  reference: Referência
+  overview: Visão Geral
+  guides: Guias
+  code_examples: Exemplos de códigos
+  search_code_examples: Exemplos de código de pesquisa
+  search_results_for: Search results for
+  matches_displayed: Matches displayed
+  show_more: Show more
+  explore_people_and_projects: Explore people and projects
+  sorry: Desculpe, não há resultados para
+  no_example: It looks like we don't have an example that fits your filter.
+  try_another: Try another filter or add your code example.
+  no_result: Sorry, there are no guides that match your filter.
+  learn: Learn how to add a code example
+  communities_using_discussions: Comunidades que usam discussões
+  add_your_community: Add your community
+  sponsor_community: GitHub Sponsors community
+  supported_releases: Supported releases
+  release_notes_for: Release notes for
+  upgrade_from: Upgrade from
+  browse_all_docs: Browse all docs
+  browse_all: Browse all
+  docs: documentação
+  explore_release_notes: Explore release notes
+  view: Visualizar Tudo
+product_guides:
+  start_path: Start learning path
+  learning_paths: '{{ productMap[currentProduct].name }} learning paths'
+  learning_paths_desc: Os caminhos de aprendizado são uma coleção de guias que ajudam você a dominar um assunto específico.
+  guides: '{{ productMap[currentProduct].name }} guides'
+  more_guides: mais guias
+  load_more: Carregar mais guias
+  all_guides: 'All {{ productMap[currentProduct].name }} guides'
+  filter_instructions: Filter the guide list using these controls
+  filters:
+    type: Tipo
+    topic: Tópico
+    all: Todas
+  guides_found:
+    multiple: '{n} guides found'
+    one: 1 guide found
+    none: No guides found
+  guide_types:
+    overview: Visão Geral
+    quick_start: QuickStart
+    tutorial: Tutorial
+    how_to: Guia prático
+    reference: Referência
+learning_track_nav:
+  prevGuide: Guia anterior
+  nextGuide: Próximo guia
+toggle_images:
+  off: Images are off, click to show
+  on: Images are on, click to hide
+  hide_single: Hide image
+  show_single: Show image
+scroll_button:
+  scroll_to_top: Scroll to top

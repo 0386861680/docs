@@ -1,1 +1,1 @@
-Connect with people around the world in the [{% data variables.product.prodname_gcf %}](https://github.community)
+{% data variables.product.prodname_dotcom %} tem uma ótima comunidade de suporte onde você pode pedir ajuda e conversar com pessoas de todo o mundo. Junte-se à conversa na [Comunidade de Suporte do Github](https://github.community/).

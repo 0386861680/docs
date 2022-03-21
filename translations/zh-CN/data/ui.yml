@@ -1,62 +1,86 @@
 ---
+meta:
+  default_description: Get started, troubleshoot, and make the most of GitHub. Documentation for new users, developers, administrators, and all of GitHub's products.
 header:
   github_docs: GitHub Docs
   contact: 联系我们
   notices:
-    ghe_release_candidate: GitHub Enterprise Server 2.22 is currently under limited release as a release candidate.
-    localization_complete: 我们经常发布文档更新，此页面的翻译可能仍在进行中。有关最新信息，请访问<a id="to-english-doc" href="/en">英文文档</a>。如果此页面上的翻译有问题，请<a href="https://github.com/contact?form[subject]=translation%20issue%20on%20help.github.com&form[comments]=">告诉我们</a>。
+    ghae_silent_launch: GitHub AE 目前是有限发行版。请<a href="https://enterprise.github.com/contact">联系我们的销售团队</a>以了解更多信息。
+    release_candidate: '# 版本名称是通过 includes/header-notification.html 在以下文本之前呈现：目前可用作发行版候选。更多信息请参阅“<a href="/admin/overview/about-upgrades-to-new-releases">关于升级到新版本</a>”。'
+    localization_complete: 我们经常发布文档更新，此页面的翻译可能仍在进行中。有关最新信息，请访问<a id="to-english-doc" href="/en">英文文档</a>。如果此页面上的翻译有问题，请<a href="https://github.com/contact?form[subject]=translation%20issue%20on%20docs.github.com&form[comments]=">告诉我们</a>。
     localization_in_progress: 你好，探索者！ 此页面正在积极开发或仍在翻译中。有关最新和最准确的信息，请访问我们的<a id="to-english-doc" href="/en">英文文档</a>。
-    product_in_progress: '👋你好，探索者！ 此页面正在积极开发中。有关最新和最准确的信息，请访问我们的<a href="https://developer.github.com">开发者文档</a>。'
+    early_access: '📣请<b>不要公开分享</b>此 URL，该页面包含有关早期访问功能的内容。'
+    release_notes_use_latest: 请使用最新版本获取最新的安全性、性能和错误修复。
+    #GHES release notes
+    ghes_release_notes_upgrade_patch_only: '📣 这不是 Enterprise Server 最新的<a href="#{{ latestPatch }}">补丁版本</a>。'
+    ghes_release_notes_upgrade_release_only: '📣 这不是 Enterprise Server 的<a href="/enterprise-server@{{ latestRelease }}/admin/release-notes">最新版本</a>。'
+    ghes_release_notes_upgrade_patch_and_release: '📣 这不是此版本系列的<a href="#{{ latestPatch }}">最新修补版</a>，也不是 Enterprise Server 的<a href="/enterprise-server@{{ latestRelease }}/admin/release-notes">最新版本</a>。'
+  sign_up_cta: 注册
+picker:
+  language_picker_default_text: Choose a language
+  product_picker_default_text: All products
+  version_picker_default_text: Choose a version
+release_notes:
+  banner_text: GitHub began rolling these changes out to enterprises on
 search:
   need_help: 需要帮助？
-  placeholder: 搜索主题、产品...
+  placeholder: 搜索主题、产品......
+  loading: 正在加载
+  no_results: 未找到结果
+  search_results_for: Search results for
+  no_content: No content
+  matches_displayed: Matches displayed
+  search_error: An error occurred trying to perform the search.
 homepage:
   explore_by_product: 按产品浏览
   version_picker: 版本
 toc:
   getting_started: 入门指南
-  popular_articles: 热门文章
+  popular: 热门
   guides: 指南
+  whats_new: 新增内容
+  videos: 视频
+  all_changelogs: All changelog posts
 pages:
-  article_version: "文章版本："
+  article_version: '文章版本'
   miniToc: 本文内容
+  contributor_callout: 这篇文章的参与者和维护者是
+  all_enterprise_releases: All Enterprise Server releases
+  about_versions: About versions
 errors:
   oops: 哎呀！
   something_went_wrong: 看来出现了错误。
   we_track_errors: 我们会自动跟踪这些错误，但如果问题仍然存在，请随时联系我们。
   page_doesnt_exist: 看来此页面不存在。
 support:
-  still_need_help: Still need help?
+  still_need_help: 还需要帮助？
   contact_support: 联系支持
-  ask_community: Ask the GitHub community
-helpfulness:
-  able_to_find: Did this doc help you?
+  ask_community: 询问 GitHub 社区
+survey:
+  able_to_find: 此文档对您有帮助吗？
   yes: true
   no: false
-  yes_feedback: Want to learn about new docs features and updates? Sign up for updates!
-  email_placeholder: email@example.com
-  no_feedback: We're continually improving our docs. We'd love to hear how we can do better.
-  category_label: What problem did you have?
-  category_default: Choose an option
-  category_unclear: Information was unclear
-  category_confusing: The content was confusing
-  category_unhelpful: The article didn't answer my question
-  category_other: Other
-  comment_label: Let us know what we can do better
+  comment_yes_label: 让我们知道哪方面做得好
+  comment_no_label: 告诉我们如何改进
   optional: 可选
   required: 必选
-  email_label: Can we contact you if we have more questions?
+  email_placeholder: email@example.com
+  email_label: If we can contact you with more questions, please enter your email address
+  email_validation: Please enter a valid email address
   send: 发送​​
-  feedback: 谢谢！您的反馈已提交。
+  feedback: 谢谢！我们收到了您的反馈。
+  not_support: 如果您需要回复，请联系客服。
+  privacy_policy: 隐私政策
 contribution_cta:
-  title: Help us make these docs great!
-  body: All GitHub docs are open source. See something that's wrong or unclear? Submit a pull request.
-  button: Make a contribution
-  or: 或,
-  to_guidelines: learn how to contribute.
+  title: 帮助我们创建出色的文档！
+  body: 所有 GitHub 文档都是开源的。看到错误或不清楚的内容了吗？提交拉取请求。
+  button: 做出贡献
+  or: 或者，
+  to_guidelines: 了解如何参与。
 products:
   graphql:
     reference:
+      implements: Implements
       fields: 字段
       arguments: 参数
       name: 名称
@@ -71,8 +95,16 @@ products:
       deprecation_notice: 废弃通知
   rest:
     reference:
+      default: 默认值
+      name: 名称
+      in: In
+      type: 类型
+      description: 描述
+      notes: 注：
       parameters: 参数
       response: 响应
+      error_codes: Error Codes
+      http_status_code: HTTP Status Code
       code_sample: 代码示例
       code_samples: 代码示例
       preview_notice: 预览通知
@@ -80,6 +112,8 @@ products:
       see_preview_notice: 查看预览通知
       see_preview_notices: 查看预览通知
       preview_header_is_required: 此标头<strong>必填</strong>
+      preview_notice_to_change: This API is under preview and subject to change
+      works_with_github_apps: Works with GitHub Apps
 footer:
   all_rights_reserved: 保留所有权利
   terms: 条款
@@ -118,3 +152,63 @@ footer:
       careers: 招聘
       press: 新闻
       shop: 商店
+product_landing:
+  quickstart: 快速入门
+  reference: 参考
+  overview: 概览
+  guides: 指南
+  code_examples: 代码示例
+  search_code_examples: 搜索代码示例
+  search_results_for: Search results for
+  matches_displayed: Matches displayed
+  show_more: 显示更多
+  explore_people_and_projects: 探索人员和项目
+  sorry: 抱歉，找不到结果
+  no_example: 看起来我们没有适合您的过滤器的示例。
+  try_another: 请尝试另一个过滤器或添加您的代码示例。
+  no_result: 抱歉，没有与过滤条件匹配的指南。
+  learn: 了解如何添加代码示例
+  communities_using_discussions: 使用讨论的社区
+  add_your_community: 添加您的社区
+  sponsor_community: GitHub Sponsors 社区
+  supported_releases: 支持的版本
+  release_notes_for: 发行说明
+  upgrade_from: 升级自
+  browse_all_docs: 浏览所有文档
+  browse_all: Browse all
+  docs: 文档
+  explore_release_notes: 浏览发行说明
+  view: 查看所有
+product_guides:
+  start_path: Start learning path
+  learning_paths: '{{ productMap[currentProduct].name }} 学习路径'
+  learning_paths_desc: 学习路径是一系列帮助您掌握特定主题的指南。
+  guides: '{{ productMap[currentProduct].name }} 指南'
+  more_guides: 更多指南
+  load_more: 加载更多指南
+  all_guides: '所有 {{ productMap[currentProduct].name }} 指南'
+  filter_instructions: 使用这些控件过滤指南列表
+  filters:
+    type: 类型
+    topic: 主题
+    all: 所有
+  guides_found:
+    multiple: '找到 {n} 个指南'
+    one: 找到 1 个指南
+    none: 找不到指南
+  guide_types:
+    overview: 概览
+    quick_start: 快速入门
+    tutorial: 教程
+    how_to: 操作方法指南
+    reference: 参考
+learning_track_nav:
+  prevGuide: 上一个指南
+  nextGuide: 下一个指南
+toggle_images:
+  off: 图像已关闭，点击显示
+  on: 图像已打开，点击隐藏
+  hide_single: 隐藏图像
+  show_single: 显示图像
+scroll_button:
+  scroll_to_top: 滚动到顶部

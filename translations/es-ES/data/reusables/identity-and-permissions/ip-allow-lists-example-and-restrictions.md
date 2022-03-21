@@ -1,0 +1,1 @@
+Por ejemplo, puedes permitir el acceso desde la única dirección IP de tu red de oficina. The allow list for IP addresses will block access to private resources via the web, API, and Git from any IP addresses that are not on the allow list.
